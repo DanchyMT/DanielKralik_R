@@ -1,0 +1,55 @@
+##Domáca úloha 1_Daniel Králik
+
+Úhloha 1:
+```{r}
+Combin <- function(n,k)
+{
+  if(n >= k)
+    return(factorial(n)/(factorial(n-k)*factorial(k)))
+  else
+    return("Chyba")
+}
+Combin(5,2)
+Combin(7,7)
+Combin(2,6)
+```
+
+Úloha 2:
+```{r}
+odhadsqrt <- function(x)
+{
+an <- 1
+min <- 1e-10
+repeat
+  {
+  an <- 0.5*((x/an)+an)
+  if (abs((an*an)-x) < min)
+     break
+  }
+return(an)
+}
+odhadsqrt(77)
+```
+
+Úloha 3:
+```{r}
+integ <- function(f, a, b)
+{
+  f <- function(x) {1/2*(x^3)}
+return(integrate(f,a,b))
+}
+integ("?",1,3)
+```
+
+
+Úloha 4:
+```{r}
+library(stringi)
+clear.dia <- function(s)
+{
+  stri_trans_general(s, "Latin-ASCII")
+}
+clear.dia("Hádam to pôjde?")
+```
+
+
